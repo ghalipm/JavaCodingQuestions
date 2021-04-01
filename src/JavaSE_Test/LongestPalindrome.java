@@ -13,7 +13,7 @@ class String_LongestPalindrome_Alternative {
     public static void main(String[] args) {
 
         // string of words including one or more white space
-        String str="  abba racecar     babayega        qamaq ";
+        String str="  abba racecar     babayega        hello  ";
 
         // longestPalindrome from the str:
         System.out.println("longestPalindrome = "
