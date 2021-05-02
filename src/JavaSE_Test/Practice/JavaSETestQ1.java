@@ -1,4 +1,4 @@
-package JavaSE_Test;
+package JavaSE_Test.Practice;
 
 import java.util.ArrayList;
 import java.util.List;

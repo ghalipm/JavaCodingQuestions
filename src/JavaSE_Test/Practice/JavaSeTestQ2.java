@@ -1,4 +1,4 @@
-package JavaSE_Test;
+package JavaSE_Test.Practice;
 
 public class JavaSeTestQ2 {
     public static void main(String[] args) {

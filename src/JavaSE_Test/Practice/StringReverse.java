@@ -1,3 +1,5 @@
+package JavaSE_Test.Practice;
+
 public class StringReverse {
 
     public static String frequency(String str){

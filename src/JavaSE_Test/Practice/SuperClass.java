@@ -1,6 +1,4 @@
-package JavaSE_Test;
-
-import com.sun.xml.internal.bind.util.Which;
+package JavaSE_Test.Practice;
 
 class SuperClass {
     SuperClass(int x) {

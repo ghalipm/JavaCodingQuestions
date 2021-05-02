@@ -1,4 +1,4 @@
-package JavaSE_Test;
+package JavaSE_Test.Practice;
 
 import java.util.Arrays;
 import java.util.LinkedHashSet;
@@ -8,7 +8,7 @@ import java.util.Set;
 // arrangements you can make for the given char array.
 // if char array has only one char in it, then you can make only one arrangement: ['a'] --> [a].
 // if char array has two different chars in it, then you can make two different arrangements : ['a', 'b'] -->[a, b], [b, a].
-// if char array has two same chars in it, then you can make only one arrangement : ['a', 'a'] -->[a, b].
+// if char array has two same chars in it, then you can make only one arrangement : ['a', 'a'] -->[a, a].
 
 public class Array_Permutation {
 

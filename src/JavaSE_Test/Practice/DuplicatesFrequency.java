@@ -1,6 +1,6 @@
+package JavaSE_Test.Practice;
 
-
-    public class DuplicatesFrequency {
+public class DuplicatesFrequency {
         public static void main(String[] args) {
             //String str ="java is java language is useful";
             String str = "asss dddd f ghhh jj k";

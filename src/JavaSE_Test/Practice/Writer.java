@@ -1,4 +1,4 @@
-package JavaSE_Test;
+package JavaSE_Test.Practice;
 
 //JavaSETestQ3
 abstract class Writer {
