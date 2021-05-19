@@ -2,7 +2,7 @@ package JavaSE_Test.GeeksForGeeks;
 
 import java.util.Arrays;
 
-public class Factorial2 {
+public class Factorial_Recursive {
     public static long[] factorial(long a[], int n) {
         // code here
         long[] factorials = new long[a.length];
@@ -14,7 +14,7 @@ public class Factorial2 {
     static long M=100_000_000_7;
     // finding factorial using recursive function
     private static long factor(long n) {
-        return (n<=1)?1:(n==2)?2: n*factor(n-1);
+        return (n==0||n==1)?1:(n==2)?2: n*factor(n-1);
     }
 
     public static void main(String[] args) {
