@@ -26,7 +26,7 @@ package JavaSE_Test.Practice;
  * You can easily verify that once you land on one of these values you keep cycling.
  */
 public class PerfectNumberRecursive {
-
+    // finds the sum of squares of digits:
     public static int digitSquareSumFinder(int n){
         int squareSum=0;
         while(n>0){
@@ -36,13 +36,19 @@ public class PerfectNumberRecursive {
         return squareSum;
     }
 
-    int[] attractors={1, 4, 16, 37, 58, 89, 145, 42, 20};
+    //int[] attractors={1, 4};
+
+    // determines if number n is perfect or not
+    // the sum of squares of digits is 1, then it is perfect;
+    // if the sum of squares of digits is 4, then it is not
+    //if the sum of squares of digits is neither 1 nor 4,
+    // then it should keep calculating using the sum of squares of digits as new input
     public static boolean isPerfectNumber(int n){
         int newNum=0;
         System.out.println("digitSquareSumFinder(n) = " + digitSquareSumFinder(n));
         if(digitSquareSumFinder(n)==1) {return true;}
         else if(digitSquareSumFinder(n)==4){
-            System.out.println("The number is NOT perfect number!");
+            System.out.println("The number is NOT a perfect number!");
             return false;
         }else{
           return isPerfectNumber(digitSquareSumFinder(n));
@@ -51,7 +57,7 @@ public class PerfectNumberRecursive {
         }
 
     public static void main(String[] args) {
-        int n=13; // n=2,3,4,5,6; 7, 13, 19;
+        int n=29; // n=2,3,4,5,6,8,9,11,12,14,15,16,17,18,20;   1, 7, 13, 19; 23,28;
         System.out.println("Original number n =: " + n);
         System.out.println("isPerfectNumber("+n+") = " + isPerfectNumber(n));
 
