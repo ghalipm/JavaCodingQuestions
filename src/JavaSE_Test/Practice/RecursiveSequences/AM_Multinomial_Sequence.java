@@ -1,4 +1,4 @@
-package JavaSE_Test.RecursiveSequences;
+package JavaSE_Test.Practice.RecursiveSequences;
 
 import static java.lang.Math.floor;
 
