@@ -56,9 +56,10 @@ public class Hashing {
 
         System.out.println("hashing.myHashTable.get(1) = " + hashing.myHashTable.get(1));
         System.out.println("keys:");
+        //hashing.myHashTable.keySet().stream().forEach(System.out::println);
         hashing.myHashTable.keySet().forEach(System.out::println);
         System.out.println("values:");
-        hashing.myHashTable.values().stream().forEach(System.out::println);
+        hashing.myHashTable.values().forEach(System.out::println);
 
     }
 
