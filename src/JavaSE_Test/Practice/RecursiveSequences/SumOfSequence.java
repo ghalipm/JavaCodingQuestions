@@ -1,4 +1,4 @@
-package JavaSE_Test.RecursiveSequences;
+package JavaSE_Test.Practice.RecursiveSequences;
 
 import java.util.ArrayList;
 import java.util.List;
