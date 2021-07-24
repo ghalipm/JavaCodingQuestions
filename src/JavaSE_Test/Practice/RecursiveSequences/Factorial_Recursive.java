@@ -1,4 +1,4 @@
-package JavaSE_Test.GeeksForGeeks;
+package JavaSE_Test.Practice.RecursiveSequences;
 
 import java.util.Arrays;
 
@@ -14,12 +14,13 @@ public class Factorial_Recursive {
     static long M=100_000_000_7;
     // finding factorial using recursive function
     private static long factor(long n) {
-        return (n==0||n==1)?1:(n==2)?2: n*factor(n-1);
+        return (n==0)?1: n*factor(n-1);
     }
 
     public static void main(String[] args) {
         long[] array={3,4,5};
-        System.out.println("factorial([3, 4, 5], 3) = " + Arrays.toString(factorial(array,3)));
+        System.out.println("factorial([3, 4, 5], 3) = "
+                + Arrays.toString(factorial(array,3)));
     }
 }
 
