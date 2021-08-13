@@ -1,4 +1,4 @@
-package JavaSE_Test.GeeksForGeeks;
+package JavaSE_Test.Practice.GeeksForGeeks;
 
 import java.util.Arrays;
 
