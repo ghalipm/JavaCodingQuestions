@@ -42,9 +42,19 @@ package JavaSE_Test.Practice.GeeksForGeeks;
 
 public class FindingMissingChar {
 
-    public static String missingChars(String givenString){
+    public static String missingChars(String sentence){
         String missingCharacters="";
-
+        sentence=sentence.toLowerCase();
+        for (Character i = 'a'; i <='z'; i++) {
+             if(!sentence.contains(""+i)){
+                 missingCharacters=missingCharacters+i;
+             }else{continue;}
+        }
         return missingCharacters;
+    }
+
+    public static void main(String[] args) {
+        String sentence="The slow purple oryx meanders past the quiescent canine";
+        System.out.println("missingChars(sentence) = " + missingChars(sentence));
     }
 }
