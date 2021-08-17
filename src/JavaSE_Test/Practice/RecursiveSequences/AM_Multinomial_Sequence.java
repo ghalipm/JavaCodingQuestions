@@ -9,8 +9,8 @@ import static java.lang.Math.floor;
 public class AM_Multinomial_Sequence {
 
     public static void main(String[] args) {
-        int numberOfVariables = 6;
-        int degree = 9;
+        int numberOfVariables = 6; // n
+        int degree = 9; // k
         if (numbersQualified(numberOfVariables, degree)) {
             System.out.println("Number of terms for "+ numberOfVariables+" variables for the degree "+ degree+" is " + AM_Sequence(numberOfVariables, degree));
             tableMaker(numberOfVariables, degree);
