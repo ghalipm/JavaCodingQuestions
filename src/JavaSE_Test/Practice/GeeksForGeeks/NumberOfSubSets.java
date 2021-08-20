@@ -32,23 +32,26 @@ import java.util.Arrays;
 public class NumberOfSubSets {
     static int N=3;
     static int K=2;
-    static int[] arr={9, 3, 8};
+    //static int[] arr={2, 4, 5, 3};
+    static int[] arr={9, 8, 3};
 
     public static void main(String[] args) {
         System.out.println("arr = " + Arrays.toString(arr));
-        System.out.println("numOfSubsets(3,2, {9, 3, 8}) = " + numOfSubsets(3, 2, arr));
+        System.out.println("numOfSubsets(3,2,"+Arrays.toString(arr)+") = " + numOfSubsets(3, 2, arr));
     }
 
     public static int numOfSubsets(int n, int k, int[] array){
         int subSetNums=0;
         Arrays.sort(array);
+        System.out.println("sorted array = " + Arrays.toString(arr));
 
         for (int i = 0; i < n; i++) {
             //System.out.println("array[i] = " + array[i]); // now array is sorted.
-            if(array[i]>k){subSetNums=0; break;}
+            if(array[i]>k){
+                System.out.println("(array[i] > k) = (" + (array[i])+">"+k+")"); subSetNums=0; break;}
             else{
-                if(array[i]==k){ subSetNums+=1; break;}
-                else{}
+                if(array[i]<=k){ subSetNums+=1; continue;}
+                else{continue;}
             }
 
 
