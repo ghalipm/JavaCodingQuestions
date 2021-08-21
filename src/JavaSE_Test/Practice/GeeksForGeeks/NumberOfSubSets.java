@@ -30,14 +30,23 @@ import java.util.Arrays;
  */
 
 public class NumberOfSubSets {
+
+    static int N=4;
+    static int K=2;
+    static int[] arr={2, 4, 5, 3};
+    /*
     static int N=3;
     static int K=2;
-    //static int[] arr={2, 4, 5, 3};
     static int[] arr={9, 8, 3};
 
+     */
+
     public static void main(String[] args) {
-        System.out.println("arr = " + Arrays.toString(arr));
-        System.out.println("numOfSubsets(3,2,"+Arrays.toString(arr)+") = " + numOfSubsets(3, 2, arr));
+        System.out.println("Arrays.toString(arr) = " + Arrays.toString(arr));
+        System.out.println("Arrays.stream(arr).sorted().forEach(System.out::println) :  ");
+        Arrays.stream(arr).sorted().forEach(System.out::println);
+        //System.out.println("numOfSubsets(3,2,"+Arrays.toString(arr)+") = " + numOfSubsets(3, 2, arr));
+        System.out.println("numOfSubsets(4,2,"+Arrays.toString(arr)+") = " + numOfSubsets(4, 2, arr));
     }
 
     public static int numOfSubsets(int n, int k, int[] array){
@@ -50,7 +59,7 @@ public class NumberOfSubSets {
             if(array[i]>k){
                 System.out.println("(array[i] > k) = (" + (array[i])+">"+k+")"); subSetNums=0; break;}
             else{
-                if(array[i]<=k){ subSetNums+=1; continue;}
+                if(array[i]<=k){ subSetNums+=1;}
                 else{continue;}
             }
 
