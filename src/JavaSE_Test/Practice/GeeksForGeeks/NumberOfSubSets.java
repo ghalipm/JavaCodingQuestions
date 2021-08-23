@@ -51,7 +51,7 @@ public class NumberOfSubSets {
         //System.out.println("Arrays.stream(arr).sorted().forEach(System.out::println) :  ");
         //Arrays.stream(arr).sorted().forEach(System.out::println);
         //System.out.println("numOfSubsets(3,2,"+Arrays.toString(arr)+") = " + numOfSubsets(3, 2, arr));
-        System.out.println("numOfSubsets(4,12,"+Arrays.toString(arr)+") = " + numOfSubsets(5, 12, arr));
+        System.out.println("numOfSubsets(3,1,"+Arrays.toString(arr)+") = " + numOfSubsets(3, 1, arr));
     }
 
     public static int numOfSubsets(int N, int K, int[] arr){
