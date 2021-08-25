@@ -34,9 +34,9 @@ import java.util.List;
 
 public class NumberOfSubSets {
   /*
-    static int N=5;
+    static int N=4;
     static int K=12;
-    static int[] arr={2, 4, 5, 3,11};
+    static int[] arr={2, 4, 5, 3};
 
    */
 
@@ -44,10 +44,19 @@ public class NumberOfSubSets {
     static int K=1;
     static int[] arr={1, 1, 1};
 
+public static int numberOfElementsOfCompleteSet(int n){
+    int totalNumber=1;
+    for (int i = 0; i < n; i++) {
+        totalNumber*=2;
+    }
+    return totalNumber-1; // empty set is excluded
+}
 
 
     public static void main(String[] args) {
+
         System.out.println("Arrays.toString(arr) = " + Arrays.toString(arr));
+
         //System.out.println("Arrays.stream(arr).sorted().forEach(System.out::println) :  ");
         //Arrays.stream(arr).sorted().forEach(System.out::println);
         //System.out.println("numOfSubsets(3,2,"+Arrays.toString(arr)+") = " + numOfSubsets(3, 2, arr));
@@ -61,7 +70,10 @@ public class NumberOfSubSets {
         List<Integer> newGoodList=new ArrayList<Integer>();
         List<Integer> productList=new ArrayList<Integer>();
 
+        Integer toTalProduct=1;
+
         for (int i = 0; i < N; i++) {
+            toTalProduct*=arr[i];
             //System.out.println("array[i] = " + array[i]); // now array is sorted.
             if(arr[i]<=K) {
                 newGoodList.add(arr[i]);
@@ -71,22 +83,33 @@ public class NumberOfSubSets {
             }
         }
 
-        // size of singe element list:m
-        int m=newGoodList.size();
-        int h=productList.size();
-         do{
-            for (int i = 0; i < newGoodList.size()-1; i++) {
-                for (int j = i+1; j <newGoodList.size(); j++) {
-                    if(newGoodList.get(i)*newGoodList.get(j)<=K){
-                        productList.add(newGoodList.get(i)*newGoodList.get(j));
-                    }else{continue;}
+        if(toTalProduct<=K){return numberOfElementsOfCompleteSet(N); }
+        else {
+
+            // size of singe element list:m
+            int m = newGoodList.size();
+            int h = productList.size();
+            do {
+                for (int i = 0; i < newGoodList.size() - 1; i++) {
+                    for (int j = i + 1; j < newGoodList.size(); j++) {
+                        if (newGoodList.get(i) * newGoodList.get(j) <= K) {
+                            productList.add(newGoodList.get(i) * newGoodList.get(j));
+                        } else {
+                            continue;
+                        }
+                    }
                 }
-            }
-            if (productList.size()>0) {newGoodList.addAll(productList); productList.clear();}
-            else{break;}
-        }while (h>0);
-        System.out.println("newGoodList = " + newGoodList);
-        return newGoodList.size();
+                if (productList.size() > 0) {
+                    newGoodList.addAll(productList);
+                    productList.clear();
+                } else {
+                    break;
+                }
+            } while (h > 0);
+            System.out.println("newGoodList = " + newGoodList);
+            return newGoodList.size();
+
+        }
     }
 
 
