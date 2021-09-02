@@ -17,40 +17,46 @@ public class TegusCodeProblem {
         //get all entries
 
         Set<Map.Entry<String, Integer>> entries = initialPrice.entrySet();
-        /*
+
         //using for loop
         System.out.println("Ticker => ($)Price:");
         for(Map.Entry<String, Integer> entry : entries){
             System.out.println( entry.getKey() + " => $" + entry.getValue() );
         }
 
-         */
+
 
         // buy or sell transactions:
         List<Transaction> transactions=new ArrayList<>();
         Transaction transactionRecord=new Transaction("Fred","BUY","GOOG", 10);
         transactions.add(transactionRecord);
+        // after each transaction, a report schould be produced: need to be implemented.
         String investorName=transactionRecord.investorName;
         Integer totalExpenses=transactionRecord.numberOfShares*initialPrice.firstEntry().getValue(); // for buy
         Integer totalEndingValue=0;
         Double relativeChangeInValue=0.0;
 
         FinalReport finalReport=new FinalReport(investorName, totalExpenses, totalEndingValue,relativeChangeInValue);
-        System.out.println("Final Report = " + finalReport.investorName+" SPENT $"+ finalReport.totalExpenses+" AND ENDED WITH $"+totalEndingValue+ ", A " +relativeChangeInValue+"% RETRUN");
+        System.out.println("Final Report = " + finalReport.investorName+" SPENT $"+ finalReport.totalExpenses+" AND ENDED WITH $"+totalEndingValue+ ", A " +relativeChangeInValue+"% RETURN");
 
         //transactionRecord=new Transaction("Lisa","BUY","TEGUS", 10);
         //transactions.add(transactionRecord);
         transactionRecord=new Transaction("Fred","BUY","FB", 5);
         transactions.add(transactionRecord);
+        if(transactionRecord.buyOrSell.equals("BUY")) {
+            finalReport.totalExpenses += transactionRecord.numberOfShares * initialPrice.firstEntry().getValue();
+            finalReport = new FinalReport(investorName, totalExpenses, totalEndingValue, relativeChangeInValue);
+            System.out.println("Final Report = " + finalReport.investorName + " SPENT $" + finalReport.totalExpenses + " AND ENDED WITH $" + totalEndingValue + ", A " + relativeChangeInValue + "% RETURN");
+        }
 
-        /*
+
         //print out transactions:
         System.out.println("===============Transactions:===============");
         for (int i = 0; i < transactions.size(); i++) {
             System.out.println("transactions.get("+i+").investor= " + transactions.get(i).investorName+", "+transactions.get(i).buyOrSell+", "+transactions.get(i).ticker+", "+transactions.get(i).numberOfShares);
         }
 
-         */
+
 
 
         // price change
@@ -66,13 +72,13 @@ public class TegusCodeProblem {
         priceChanges.add(priceChangeRecord);
 
         //print out priceChanges:
-        /*
+
         System.out.println("===============Price Changes:===============");
         for (int i = 0; i < priceChanges.size(); i++) {
             System.out.println("priceChanges.get("+i+").ticker= " + priceChanges.get(i).ticker+", "+priceChanges.get(i).upOrDown+", "+priceChanges.get(i).absoluteChange+", "+priceChanges.get(i).relativeChange);
         }
 
-         */
+
 
         System.out.println("================== Final Output: ======================");
 
