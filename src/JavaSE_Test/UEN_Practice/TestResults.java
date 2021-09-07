@@ -46,6 +46,7 @@ return passingStudentsList;
         students.add(new Student("Mike", 80));
         students.add(new Student("James", 57));
         students.add(new Student("Alan", 21));
-        studentsThatPass(students.stream(), 50).forEach(System.out::println);
+        students.add(new Student("Rauda", 90));
+        studentsThatPass(students.stream(), 50).stream().sorted().forEach(System.out::println);
     }
 }
