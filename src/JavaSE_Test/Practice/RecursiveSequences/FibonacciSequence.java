@@ -1,6 +1,4 @@
-package JavaSE_Test.RecursiveSequences;
-
-import java.util.*;
+package JavaSE_Test.Practice.RecursiveSequences;
 
 import static java.lang.Math.floor;
 
@@ -30,9 +28,9 @@ public class FibonacciSequence {
         return (n == floor(n) && n > 0);
     }
 
-        // Fibonacci sequence recursive: f_0=1,
-        //                               f_1=1,
-        //                               f_n=f_(n-1)+f_(n-2);
+        // Fibonacci sequence recursive: f(0)=1,
+        //                               f(1)=1,
+        //                               f(n)=f(n-1)+f(n-2), n>1;
 
     /*
         public static int fibRecursive(int num){
@@ -47,7 +45,6 @@ public class FibonacciSequence {
         // below we have to return only the right hand side of the function
         return ( num==1 || num==0 )? 1 : fibRecursive(num-1)+ fibRecursive(num-2);
     }
-
 
         //regular way of finding Fibonacci sequence:
         public static int fib(int num){
@@ -75,9 +72,8 @@ public class FibonacciSequence {
      */
 
     public static int factorial(int n){
-        return (n==0||n==1)?1:n * factorial(n - 1);
+        return (n==0)?1:n * factorial(n - 1);
     }
-
 
 
 }
