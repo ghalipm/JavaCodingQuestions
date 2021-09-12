@@ -1,4 +1,4 @@
-package JavaSE_Test.UEN_Practice;
+package JavaSE_Test.UEN_Practice.RecursiveFunctions;
 
 // finding factorial using recursive function
 
