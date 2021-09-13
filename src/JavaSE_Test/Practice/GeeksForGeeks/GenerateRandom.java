@@ -1,4 +1,4 @@
-package JavaSE_Test.Practice;
+package JavaSE_Test.Practice.GeeksForGeeks;
 
 class GenerateRandom {
     public static void main( String args[] ) {
