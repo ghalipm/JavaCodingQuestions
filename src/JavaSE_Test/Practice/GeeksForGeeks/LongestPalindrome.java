@@ -1,4 +1,4 @@
-package JavaSE_Test.Practice;
+package JavaSE_Test.Practice.GeeksForGeeks;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
