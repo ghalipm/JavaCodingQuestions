@@ -1,9 +1,6 @@
-package JavaSE_Test.GeeksForGeeks;
+package JavaSE_Test.Practice.GeeksForGeeks;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * Given an array of size N-1 such that it only contains
@@ -48,7 +45,7 @@ public class MissingNumber {
     public static void main(String[] args) {
         /*
         int[] array={2,3, 4, 1, 6,7};
-         n=7; // --> 4.
+         n=7; // --> 5.
          */
         int[] array={5, 2, 3, 1};
         int n=5; // -->4.
