@@ -18,6 +18,9 @@ public class MyStreamPractice {
         List<Integer> listPlus2 = list.stream().map( a ->  a+2  ).collect(Collectors.toList());
         System.out.println("listPlus2 = " + listPlus2);
 
+        // filtering each element of the list which is greater than 5
+        List<Integer> listGreaterThanFive = list.stream().filter(a->a>5).collect(Collectors.toList());
+        System.out.println("listGreaterThanFive = " + listGreaterThanFive);
 
     }
 }
