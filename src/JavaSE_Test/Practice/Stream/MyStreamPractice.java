@@ -22,5 +22,10 @@ public class MyStreamPractice {
         List<Integer> listGreaterThanFive = list.stream().filter(a->a>5).collect(Collectors.toList());
         System.out.println("listGreaterThanFive = " + listGreaterThanFive);
 
+        // summation of elements which is greater than 5
+        Integer listSum = list.stream().filter(a->a>5).reduce(0, (x,y)->x+y);
+        System.out.println("listSum = " + listSum);
+
+
     }
 }
