@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class MyStreamPractice {
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9,10));
+        List<Integer> list = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9,10,-11));
         System.out.println("list = " + list);
 
         // double the elements of the list.
@@ -23,8 +23,15 @@ public class MyStreamPractice {
         System.out.println("listGreaterThanFive = " + listGreaterThanFive);
 
         // summation of elements which is greater than 5
-        Integer listSum = list.stream().filter(a->a>5).reduce(0, (x,y)->x+y);
+        //Integer listSum = list.stream().filter(a->a>5).reduce(0, (x,y)->x+y);
+        Integer listSum = list.stream().reduce(0, (x,y)->x+y);
         System.out.println("listSum = " + listSum);
+
+
+        // product of elements which is greater than 0
+        Integer listProd = list.stream().filter(a->a>0).reduce(1, (x,y)->x*y);
+        //Integer listProd = list.stream().reduce(1, (x,y)->x*y);
+        System.out.println("listProd = " + listProd);
 
 
     }
