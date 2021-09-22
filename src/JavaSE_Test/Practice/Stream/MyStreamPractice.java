@@ -24,9 +24,8 @@ public class MyStreamPractice {
 
         // summation of elements which is greater than 5
         //Integer listSum = list.stream().filter(a->a>5).reduce(0, (x,y)->x+y);
-        Integer listSum = list.stream().reduce(0, (x,y)->x+y);
+        Integer listSum = list.stream().reduce(0, Integer::sum);
         System.out.println("listSum = " + listSum);
-
 
         // product of elements which is greater than 0
         Integer listProd = list.stream().filter(a->a>0).reduce(1, (x,y)->x*y);
