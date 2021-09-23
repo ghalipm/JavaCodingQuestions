@@ -2,7 +2,9 @@ package JavaSE_Test.Practice.Stream;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class MyStreamPractice {
@@ -31,6 +33,24 @@ public class MyStreamPractice {
         Integer listProd = list.stream().filter(a->a>0).reduce(1, (x,y)->x*y);
         //Integer listProd = list.stream().reduce(1, (x,y)->x*y);
         System.out.println("listProd = " + listProd);
+
+
+        System.out.println("----------------------------------------");
+
+        List<String> elements = new ArrayList<>();
+        elements.addAll(Arrays.asList("Java", "Java", "C#", "Python", "Python", "Python"));
+
+        List<String> duplicatedElements = new ArrayList<>();
+
+        Predicate<String> isDuplicated = p -> Collections.frequency(elements, p) > 1;
+
+        elements.forEach( s ->{
+            if(isDuplicated.test(s))
+                if(!duplicatedElements.contains(s))
+                    duplicatedElements.add(s);
+        } );
+
+        System.out.println(duplicatedElements);
 
 
     }
