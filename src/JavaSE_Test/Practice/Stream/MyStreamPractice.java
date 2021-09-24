@@ -42,7 +42,7 @@ public class MyStreamPractice {
 
         List<String> duplicatedElements = new ArrayList<>();
 
-        Predicate<String> isDuplicated = p -> Collections.frequency(elements, p) > 1;
+        Predicate<String> isDuplicated = p -> Collections.frequency(elements, p) > 2;
 
         elements.forEach( s ->{
             if(isDuplicated.test(s))
