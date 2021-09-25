@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -51,6 +52,21 @@ public class MyStreamPractice {
         } );
 
         System.out.println(duplicatedElements);
+
+
+        System.out.println("--------------DescendingOrder------------------");
+
+        Consumer<String[]> printDescendingOrder = arr -> {
+            Arrays.sort(arr);
+            for (int i = arr.length - 1; i >= 0; i--) {
+                System.out.print(arr[i]+" ");
+            }
+            System.out.println();
+        };
+
+        //int[] array = {10, 20, 30, 5, 4, 3, 1, 2, 100, 0};
+        String[] array = {"A", "B", "C", "D"};
+        printDescendingOrder.accept(array);
 
 
     }
