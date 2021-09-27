@@ -38,8 +38,7 @@ public class MyStreamPractice {
 
         System.out.println("----------------------------------------");
 
-        List<String> elements = new ArrayList<>();
-        elements.addAll(Arrays.asList("Java", "Java", "C#", "Python", "Python", "Python"));
+        List<String> elements = new ArrayList<>(Arrays.asList("Java", "Java", "C#", "Python", "Python", "Python"));
 
         List<String> duplicatedElements = new ArrayList<>();
 
@@ -65,7 +64,7 @@ public class MyStreamPractice {
         };
 
         //int[] array = {10, 20, 30, 5, 4, 3, 1, 2, 100, 0};
-        String[] array = {"A", "B", "C", "D"};
+        String[] array = {"Alma", "Baba", "Cava", "Dada"};
         printDescendingOrder.accept(array);
 
 
