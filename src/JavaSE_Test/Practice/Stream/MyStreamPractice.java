@@ -53,7 +53,7 @@ public class MyStreamPractice {
         System.out.println(duplicatedElements);
 
 
-        System.out.println("--------------DescendingOrder------------------");
+        System.out.println("--------------Descending Order------------------");
 
         Consumer<String[]> printDescendingOrder = arr -> {
             Arrays.sort(arr);
