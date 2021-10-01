@@ -23,8 +23,8 @@ public class Sum {
         }
 
         //enhanced for loop:
-        for (Integer integer : list) {
-            temp2 += integer;
+        for (Integer listElement : list) {
+            temp2 += listElement;
         }
 
         //stream:
@@ -47,7 +47,8 @@ public class Sum {
     }
 
     public static void main(String[] args) {
-        List<Integer> list=new ArrayList<>(Arrays.asList(3,5,7,6,9));
+        Integer[] arr={3,5,7,6,9};
+        List<Integer> list=new ArrayList<>(Arrays.asList(arr));
         System.out.println("sum(list) = " + sum(list));
         System.out.println("sum(10) = " + sum(10));
     }
