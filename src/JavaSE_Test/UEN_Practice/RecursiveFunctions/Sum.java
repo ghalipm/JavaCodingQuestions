@@ -49,7 +49,9 @@ public class Sum {
     public static void main(String[] args) {
         Integer[] arr={3,5,7,6,9};
         List<Integer> list=new ArrayList<>(Arrays.asList(arr));
+
         System.out.println("sum(list) = " + sum(list));
+
         System.out.println("sum(10) = " + sum(10));
     }
 
