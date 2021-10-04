@@ -42,8 +42,8 @@ public class Sum {
         // any one of the 4 returns will do the job
         //return temp1;
         //return temp2;
-        //return temp3;
-        return  sum;
+        return temp3;
+        //return  sum;
     }
 
     public static void main(String[] args) {
