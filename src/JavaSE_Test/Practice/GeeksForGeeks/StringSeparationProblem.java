@@ -30,7 +30,7 @@ public class StringSeparationProblem {
 
         for (int i = 0; i < 12; i++) {
             entryRowCells[i]=entryRow[i];
-            System.out.println("entryRowCells["+i+"] = " + entryRowCells[i]);
+            System.out.println("Cell["+(i+1)+"] = " + entryRowCells[i]);
 
         }
 
