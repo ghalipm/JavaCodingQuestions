@@ -15,7 +15,7 @@ public class FibonacciNumberRecursive {
         }
     }
 
-    // Fibonacci sequence recursive ternary:
+    // Fibonacci sequence recursive, ternary:
     public static int fibonacciSequence(int n){
         return (n==0||n==1)?1:
              fibonacciSequence(n-1)+fibonacciSequence(n-2);
