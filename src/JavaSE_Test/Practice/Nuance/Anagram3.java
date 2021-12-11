@@ -4,7 +4,6 @@ import java.util.*;
 
 public class Anagram3 {
 
-
     public static String CharsWithFrequency(String str){
         String wordsWithFrequency="";
 
