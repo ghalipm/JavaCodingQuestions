@@ -11,11 +11,13 @@ public class AnagramShort {
             charArr[i]=str.charAt(i);
         }
         Arrays.sort(charArr);
-        System.out.println("charArr = " + Arrays.toString(charArr));
+        //System.out.println("charArr = " + Arrays.toString(charArr));
         return charArr;
     }
 
+    // to compare two Arrays, one has to use: Arrays.equals(arr1[], arr2[])
     public static boolean isAnagram(String str1, String str2){
+        System.out.println(" Chars "+ Arrays.toString(stringToCharsSorted(str1)) +" and "+ Arrays.toString(stringToCharsSorted(str2)) +" are same: "+Arrays.equals(stringToCharsSorted(str1), stringToCharsSorted(str2)));
         return Arrays.equals(stringToCharsSorted(str1), stringToCharsSorted(str2));
     }
 
@@ -27,8 +29,8 @@ public class AnagramShort {
         String str3="aab";
         String str4="abb";
 
-        System.out.println("isAnagram(str1,str2) = " + isAnagram(str1, str2));
-        System.out.println("isAnagram(str3, str4) = " + isAnagram(str3, str4));
+        System.out.println(" isAnagram( "+str1+" , "+str2+" ) = " + isAnagram(str1, str2));
+        System.out.println(" isAnagram( "+str3+" , "+str4+" ) = " + isAnagram(str3, str4));
 
 
     }
